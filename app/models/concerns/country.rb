@@ -1,6 +1,8 @@
 class Country
     include HTTParty
 
+    #default_options.update(verify: false) # Turn off SSL verification
+
     base_uri 'https://restcountries.eu/rest/v2/'
     format :json
 
