@@ -13,8 +13,8 @@ class Country
             country['borders'].map! do |country_code|
                 countries.find { |country| country['alpha3Code'] == country_code } ['name']
             end
-            country['languages'].map! { |language| language['name']}
-            
+            country['languages'].map! { |language| language['name'] }
+            country['currencies'].map! { |currency| currency['name'] }
         end
 
         countries
