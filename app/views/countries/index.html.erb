@@ -12,7 +12,7 @@
     </tr>
     <% @countries_to_display.each do |country| %>
         <tr>
-            <td><%= image_tag country["flag"], alt:"Flag of #{country['name']}", size: "100x50", class: "flag"%></td>
+            <td><%= image_tag country["flag"], alt:"Flag of #{country['name']}", size: "100x50", class: "flag" %></td>
             <td><%= country["name"] %></td>
             <td><%= country["capital"] %></td>
             <td><%= number_to_human country["population"].to_i %></td>
@@ -21,4 +21,3 @@
         </tr>
     <% end %>
 </table>
-
