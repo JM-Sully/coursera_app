@@ -11,7 +11,7 @@
         <th>Shares Borders With</th>
     </tr>
     <% @countries_to_display.each do |country| %>
-        <tr>
+        <tr class=<%= cycle('odd', 'even') %>>
             <td><%= image_tag country["flag"], alt:"Flag of #{country['name']}", size: "100x50", class: "flag" %></td>
             <td><%= country["name"] %></td>
             <td><%= country["capital"] %></td>
