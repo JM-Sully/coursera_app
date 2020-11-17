@@ -6,6 +6,11 @@ class Country
     
     format :json
 
+    def set_defaults
+        self == "water" if self.nil?
+    end
+    
+
     def self.all
         countries = get("/all")
 
