@@ -6,23 +6,22 @@ class Country
     
     format :json
 
-    def set_defaults
-        self == "water" if self.nil?
+    def initialize (countries = "water")
+        @countries = countries
     end
-    
 
     def self.all
-        countries = get("/all")
+        @countries = get("/all")
 
-        countries.each do |country|
+        @countries.each do |country|
             country['borders'].map! do |country_code|
-                countries.find { |country| country['alpha3Code'] == country_code } ['name']
+                @countries.find { |country| country['alpha3Code'] == country_code } ['name']
             end
             country['languages'].map! { |language| language['name'] }
             country['currencies'].map! { |currency| currency['name'] }
         end
 
-        countries
+        @countries
 
     end
 end
