@@ -14,9 +14,13 @@ class Country
         @countries = get("/all")
 
         @countries.each do |country|
-            country['borders'].map! do |country_code|
+            if country['borders'].empty?
+                borders = "I'm an island"
+            else country['borders'].map do |country_code|
                 @countries.find { |country| country['alpha3Code'] == country_code } ['name']
+                end
             end
+            country['borders'] = borders
             country['languages'].map! { |language| language['name'] }
             country['currencies'].map! { |currency| currency['name'] }
         end
