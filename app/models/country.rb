@@ -10,6 +10,10 @@ class Country
         @countries = countries
     end
 
+    #def self.search(search)
+        #if search
+            #show_country = 
+
     def self.all
         @countries = get("/all")
 
