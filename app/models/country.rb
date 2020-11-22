@@ -6,14 +6,6 @@ class Country
     
     format :json
 
-    def initialize (countries = "water")
-        @countries = countries
-    end
-
-    #def self.search(search)
-        #if search
-            #show_country = 
-
     def self.all
         @countries = get("/all")
 
@@ -31,5 +23,11 @@ class Country
         @countries
 
     end
+
+    def search
+        @country_search = get("/all")
+
+    end
+    
 end
 
