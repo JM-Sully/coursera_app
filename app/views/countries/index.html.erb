@@ -1,11 +1,5 @@
 <h1>Countries (<%= @countries_to_display.size %>)</h1>
 
-<%= form_with(url: "/countries/search", method: "get") do %>
-    <%= label_tag(:q, "Search for a country:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-<% end %>
-
 <table border="1">
     <tr>
         <th>Flag</th>

@@ -24,8 +24,10 @@ class Country
 
     end
 
-    def search
-        @country_search = get("/all")
+    def self.search(search)
+        include self.all
+
+        if search
 
     end
     
