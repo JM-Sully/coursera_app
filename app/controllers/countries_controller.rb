@@ -14,7 +14,11 @@ class CountriesController < ApplicationController
   end
 
   def search
-    #@found_countries = @all_countries.search(params[:search])
+    if params[:search].blank?
+      redirect_to(countries_index_path, alert: "Empty field!") and return
+    else
+
+    end
   end
   
 end
