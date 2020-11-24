@@ -28,6 +28,8 @@ class Country
         include self.all
 
         if search
+        end
+        
 
     end
     
