@@ -23,15 +23,6 @@ class Country
         @countries
 
     end
-
-    def self.search(search)
-        include self.all
-
-        if search
-        end
-        
-
-    end
     
 end
 

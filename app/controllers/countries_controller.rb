@@ -15,10 +15,10 @@ class CountriesController < ApplicationController
 
   def search
     if params[:search].blank?
-      #redirect_to(search_page_path, alert: "Empty field!") and return
-      #redirect_to(countries_index_path, alert: "Empty field!") and return
+      redirect_to(search_page_path, alert: "Empty field!") and return
+      #redirect_to(root_path, alert: "Empty field!") and return
     else
-      redirect_to(search_page_path, alert: "Working on it") and return
+
     end
   end
   
