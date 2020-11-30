@@ -17,7 +17,8 @@ class CountriesController < ApplicationController
     if params[:search].blank?
       flash[:notice] = "Empty field!"
     else
-
+      @parameter = params[:search].capitalize
+      @countries_to_display = Country.for(@parameter)
     end
   end
   
